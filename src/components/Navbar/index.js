@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <Nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
-        <a className="navbar-brand" href="#a">
+          <a className="navbar-brand" href="#a">
           <img src={Logo} className="img-fluid" loading="lazy" alt="logo da Pargos Club" />
         </a>
         <button className="navbar-toggler" type="button" dataToggle="collapse" dataTarget="#navbarSupportedContent" ariaControls="navbarSupportedContent" ariaExpanded="false" ariaLabel="Toggle navigation">

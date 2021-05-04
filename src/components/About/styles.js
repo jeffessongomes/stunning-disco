@@ -6,9 +6,7 @@ export const AboutContainer = Styled.div`
   background: url(${uniao});
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: 50% 160%;
-
-
+  background-position: 50% 225%;
 
   h2 {
     font-family: Raleway;
@@ -22,7 +20,7 @@ export const AboutContainer = Styled.div`
     line-height: 33px;
   }
 
-  padding: 97px 0 117px 0;
+  padding: 97px 0 60px 0;
 `;
 
 export const Img = Styled.img`
