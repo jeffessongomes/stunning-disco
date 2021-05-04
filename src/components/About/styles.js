@@ -6,6 +6,7 @@ export const AboutContainer = Styled.div`
   background: url(${uniao});
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: 50% 160%;
 
 
 
@@ -18,6 +19,7 @@ export const AboutContainer = Styled.div`
   p{
     font-family: Raleway;
     font-size: 18px;
+    line-height: 33px;
   }
 
   padding: 97px 0 117px 0;
