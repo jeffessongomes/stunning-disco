@@ -9,13 +9,13 @@ export const Nav = Styled.nav`
   margin: 0;
 
   &::before{
-    border-top: 10px solid #0000c6;
+    border-top: 22px solid #0059A4;
 
     content: '';
     display: block;
-    height: 15px;
+    height: 33px;
     width: 100%;
-    background: #CB6424;
+    background: #E22D4A;
     margin: 0;
   }
 
@@ -24,20 +24,24 @@ export const Nav = Styled.nav`
     align-items: center;
     justify-content: center;
 
-    height: 225px;
-    width: 225px;
+    height: 255px;
+    width: 255px;
 
-    background: red;
-    margin-top: -85px;
-    margin-left: 100px;
+    background: #FFF;
+    margin-top: -120px;
     border-radius: 50%;
+
+    padding: 115px 42px 60px 42px; 
   }
 
   .nav-item{
-    padding: 15px 35px !important;
+    padding: 96px 35px !important;
+    .nav-link{
+      font-size: 18px !important;
+      font-family: Raleway;
+      color: #FFF !important;
+    }
   }
-
-
   .navbar-collapse{
     margin-top: -80px;
   }
