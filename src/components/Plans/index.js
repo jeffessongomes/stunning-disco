@@ -19,7 +19,7 @@ const Plans = () => {
               loading="lazy"
             />
           </div>
-          <div className="col-4 pl-0 pr-0">
+          <div className="col-4 pl-0">
             <img
               src={img1}
               className="img-fluid second-img"
@@ -42,13 +42,13 @@ const Plans = () => {
                     Contrate já
                   </a>
                   <a href="#FFF" className="cta-right">
-                    Beneficios
+                    Benefícios
                   </a>
                 </div>
               </div>
             </CardPlan>
           </div>
-          <div className="col-4  pl-0 pr-0">
+          <div className="col-4  pl-0">
             <img
               src={img2}
               className="img-fluid third-img"

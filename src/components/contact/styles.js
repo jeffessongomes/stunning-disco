@@ -8,8 +8,9 @@ export const FormStyle = Styled.form`
     color: #E22D4A;
     letter-spacing: 1.35px;
     margin-top: 53px;
-    margin-bottom: 35px;
   }
+
+  margin-bottom: 73px;
 `;
 
 export const ContainerForm = Styled.form`
