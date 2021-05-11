@@ -32,6 +32,10 @@ export const Nav = Styled.nav`
     border-radius: 50%;
 
     padding: 115px 42px 60px 42px; 
+
+    @media screen and (max-width: 960px) {
+      display: none;
+    }
   }
 
   .nav-item{

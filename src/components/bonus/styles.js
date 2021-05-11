@@ -26,11 +26,30 @@ export const Container = Styled.div`
     padding-top: 67px;
     margin-bottom: 65px;
   }
+
+  .cardInfoContainer{
+    @media screen and (max-width: 960px) {
+      margin-top: -190px;
+    }
+  }
 `;
 
 export const ContainerBonus = Styled.div`
   background: #ADD54E;
   padding-bottom: 98px;
+
+  @media screen and (max-width: 960px) {
+    .cardContainer{
+      display: flex;
+      justify-content: center;
+
+      div{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+    }
+  }
 `;
 
 export const Nav = Styled(Tabs)`
@@ -67,6 +86,14 @@ export const Nav = Styled(Tabs)`
 
       font-family: Raleway;
       padding: 15px 55px;
+
+      @media screen and (max-width: 960px) {
+        padding: 10px 15px;
+      }
+    }
+
+    @media screen and (max-width: 960px) {
+      padding: 10px 15px;
     }
   }
 `;
@@ -104,12 +131,21 @@ export const CardInfo = Styled.div`
   margin-top: -210px;
   box-shadow: 0px 3px 6px #00000029;
 
-
   img.cardImage {
     width: 350px;
     height: 284px;
   }
   
+  @media screen and (max-width: 960px) {
+    margin-top: 10px;
+    width: 100%;
+
+    img.cardImage{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
   p{
     font-family: Ubuntu;
     font-weight: 600;

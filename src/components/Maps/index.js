@@ -20,8 +20,8 @@ const Maps = () => {
         </div>
         <div style={{ marginTop: "-250px" }}>
           <div className="container info">
-            <div className="row banner">
-              <div className="col-3 local">
+            <div className="row banner contentInfo">
+              <div className="col-lg-3 col-12 local">
                 <h3>
                   Nossa <br /> Localização
                 </h3>
@@ -32,7 +32,7 @@ const Maps = () => {
                     <img src={Local} alt="Símbolo de localização" />
                     <p className="mb-0">RN-306, 36,Ceará-Mirim - RN</p>
                   </div>
-                  <div className="d-flex align-items-center justify-content-between">
+                  <div className="d-flex align-items-center justify-content-between clockAndPhone">
                     <div className="d-flex align-items-center">
                       <img src={Clock} alt="Desenho de um relógio" />
                       <div className="clock">
@@ -47,7 +47,7 @@ const Maps = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-2 d-flex align-items-center">
+              <div className="col-lg-2 d-flex align-items-center">
                 <div className="d-flex align-items-center">
                   <img
                     src={Seta}

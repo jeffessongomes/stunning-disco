@@ -12,6 +12,7 @@ export const BannerContainer = Styled.div`
 
   background: url(${Banner});
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   
 

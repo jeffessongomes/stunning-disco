@@ -34,6 +34,13 @@ export const Container = Styled.div`
                 justify-content: center;
                 align-items: center;
             }
+
+            .contentInfo{
+                .clockAndPhone{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
         }
     }
 
