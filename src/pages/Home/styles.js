@@ -2,6 +2,19 @@ import Styled from 'styled-components'
 
 import Banner from '../../assets/img/banner.png'
 
+export const App = Styled.div`
+  .zap{
+    position: fixed;
+    z-index: 8001;
+    bottom: 50px;
+    right: 95px;
+    @media screen and (max-width: 960px) {
+      bottom: 70px;
+      right: 20px;
+    }
+  }
+`;
+
 export const BannerContainer = Styled.div`
   margin-top: -170px;
 
@@ -20,7 +33,7 @@ export const BannerContainer = Styled.div`
   align-items: flex-end;
 
   &::after{
-    content: 'a';
+    content: '';
     display: block;
     height: 15px;
     width: 100%;
@@ -29,6 +42,10 @@ export const BannerContainer = Styled.div`
     
     border-top: 1px solid #707070;
     border-bottom: 1px solid #707070;
+  }
+
+  @media screen and (max-width: 960px) {
+    margin-top: -235px;
   }
   `
 ;

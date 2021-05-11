@@ -6,7 +6,7 @@ import {
 
 const About = () => {
   return (
-    <div className="container">
+    <div className="container" id="sobre">
       <div className="row">
         <div className="col-lg-6 col-sm-12">
           <Img className="img-fluid" src={aboutImage} loading="lazy" alt="Imagem sobre um rio do Pargos Club" />

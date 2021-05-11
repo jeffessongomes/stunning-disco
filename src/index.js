@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './pages/Home';
 import reportWebVitals from './reportWebVitals';
+import Zap from './assets/img/zapzap.png';
 
 ReactDOM.render(
   <React.StrictMode>

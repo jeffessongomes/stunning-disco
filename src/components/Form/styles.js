@@ -10,6 +10,14 @@ export const FormStyle = Styled.form`
     margin-top: 53px;
     margin-bottom: 35px;
   }
+  .button{
+    @media screen and (max-width: 960px) {
+      button{
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+    }
+  }
 `;
 
 export const ContainerForm = Styled.form`

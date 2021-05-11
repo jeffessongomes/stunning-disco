@@ -8,10 +8,10 @@ import img3 from "../../assets/img/img3.png";
 
 const Plans = () => {
   return (
-    <ContainerPlan>
+    <ContainerPlan id="planos">
       <div className="container">
         <div className="row">
-          <div className="col-8 pr-0">
+          <div className="col-lg-8 col-12 pr-lg-0">
             <img
               src={img3}
               className="first-img"
@@ -19,7 +19,7 @@ const Plans = () => {
               loading="lazy"
             />
           </div>
-          <div className="col-4 pl-0">
+          <div className="col-lg-4 col-12 pl-lg-0">
             <img
               src={img1}
               className="img-fluid second-img"
@@ -27,7 +27,7 @@ const Plans = () => {
               loading="lazy"
             />
           </div>
-          <div className="col-8 pr-0">
+          <div className="col-lg-8 col-12 pr-lg-0">
             <CardPlan>
               <div className="content">
                 <h3>Nosso plano</h3>
@@ -48,7 +48,7 @@ const Plans = () => {
               </div>
             </CardPlan>
           </div>
-          <div className="col-4  pl-0">
+          <div className="col-lg-4 col-12  pl-lg-0">
             <img
               src={img2}
               className="img-fluid third-img"

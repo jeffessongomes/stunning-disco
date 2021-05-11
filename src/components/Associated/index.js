@@ -7,7 +7,7 @@ const Associated = () => {
     <ContainerAssociated>
       <div className="container">
         <div className="row">
-          <div className="offset-lg-2 col-9">
+          <div className="offset-lg-2 col-lg-9 col-12">
             <div className="content">
               <img src={Detail} alt="Imagem de um detalhe" loading="lazy" />
               <div className="text">

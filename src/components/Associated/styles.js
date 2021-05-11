@@ -33,6 +33,10 @@ export const ContainerAssociated = Styled.div`
         font-size: 35px;
 
         padding-top: 56px;
+
+        @media screen and (max-width: 960px) {
+          text-align: center;       
+        }
       }
 
       p{
@@ -40,6 +44,10 @@ export const ContainerAssociated = Styled.div`
         font-family: Raleway;
         color: #FFFFFF;
         margin: 0;
+        
+        @media screen and (max-width: 960px) {
+          text-align: center;        
+        }
       }
 
       a{

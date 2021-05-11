@@ -11,11 +11,21 @@ export const ContainerPlan = Styled.div`
   img.second-img{
     width: 380px;
     height: 400px;
+
+    @media screen and (max-width: 960px) {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   img.third-img{
     width: 380px;
     height: 370px;
+    
+    @media screen and (max-width: 960px) {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
 `;
@@ -95,6 +105,30 @@ export const CardPlan = Styled.div`
         padding: 15px 80px;
 
         text-decoration: none;
+      }
+    }
+
+    @media screen and (max-width: 960px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      height: 450px;
+
+      p{
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      div.containerButtons{
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        a{
+          margin-top: 10px;
+          margin-right: 0 !important;
+        }
       }
     }
   }

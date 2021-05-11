@@ -1,40 +1,31 @@
-import {Nav} from './styles'
+import {NavStyle} from './styles'
 
 import Logo from '../../assets/img/logotipo.png'
 
-export const Navbar = () => {
-  return (
-    <Nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
-          <a className="navbar-brand" href="#a">
-          <img src={Logo} className="img-fluid" loading="lazy" alt="logo da Pargos Club" />
-        </a>
-        <button className="navbar-toggler" type="button" dataToggle="collapse" dataTarget="#navbarSupportedContent" ariaControls="navbarSupportedContent" ariaExpanded="false" ariaLabel="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+import { Navbar, Nav } from 'react-bootstrap';
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#a">Sobre</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#a">Planos</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#a">Benefícios</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#a">Informações</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#a">Contato</a>
-            </li>
-          </ul>
-        </div>
+const NavbarComponent = () => {
+  return (
+    <NavStyle>
+      <div className="container">
+        <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="#home">
+          <img src={Logo} className="img-fluid" loading="lazy" alt="logo da Pargos Club" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="#sobre">Sobre</Nav.Link>
+            <Nav.Link href="#planos">Planos</Nav.Link>
+            <Nav.Link href="#beneficios">Benefícios</Nav.Link>
+            <Nav.Link href="#informacoes">Informações</Nav.Link>
+            <Nav.Link href="#contato">Contato</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+        </Navbar>
       </div>
-    </Nav>
+    </NavStyle>
   )
 }
 
-export default Navbar;
+export default NavbarComponent;

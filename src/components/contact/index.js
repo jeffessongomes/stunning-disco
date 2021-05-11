@@ -22,7 +22,7 @@ const Form = () => {
 
 
   return(
-    <FormStyle onSubmit={formik.handleSubmit}>
+    <FormStyle onSubmit={formik.handleSubmit} id="contato">
       <div className="container">
         <div className="row">
           <div className="col-12">

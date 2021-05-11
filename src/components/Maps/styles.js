@@ -2,6 +2,13 @@ import Styled from "styled-components";
 
 export const Container = Styled.div`
     
+    .containerBlue{
+        @media screen and (max-width: 960px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
     .map {
         border-radius: 20px;
         border: none;
@@ -10,6 +17,11 @@ export const Container = Styled.div`
 
         padding: 0 250px;
         margin: 141px 0;
+
+        @media screen and (max-width: 960px) {
+            margin: 141px 0 250px 0;
+            padding: 0;
+        }
     }
 
     .info{
@@ -25,6 +37,10 @@ export const Container = Styled.div`
                     font-size: 20px !important;
                     font-family: Raleway;
                     text-align: center;
+                    
+                    @media screen and (max-width: 960px) {
+                        padding: 30px 0;
+                    }
                 }
                 
                 border-radius: 13px;
@@ -35,18 +51,19 @@ export const Container = Styled.div`
                 align-items: center;
             }
 
-            .contentInfo{
-                .clockAndPhone{
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
         }
     }
 
     .clock{
         p{
             margin: 0;
+        }
+    }
+
+    .clockAndPhone{
+        @media screen and (max-width: 960px) {
+            display: flex;
+            flex-direction: column;        
         }
     }
 

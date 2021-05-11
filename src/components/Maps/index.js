@@ -26,7 +26,7 @@ const Maps = () => {
                   Nossa <br /> Localização
                 </h3>
               </div>
-              <div className="col-7 d-flex">
+              <div className="col-lg-7 col-12 containerBlue d-flex">
                 <div style={{ paddingTop: "37px", paddingBottom: "32px" }}>
                   <div className="d-flex align-items-center">
                     <img src={Local} alt="Símbolo de localização" />
@@ -40,14 +40,14 @@ const Maps = () => {
                         <p className="mb-0">SÁB e DOM: Das 08h00 às 18h00</p>
                       </div>
                     </div>
-                    <div className="d-flex align-items-center ml-5">
+                    <div className="d-flex align-items-center ml-lg-5">
                       <img src={Tel} alt="Desenho de um telefone" />
                       <p className="mb-0">(84) 3201.2617</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-2 d-flex align-items-center">
+              <div className="col-lg-2 d-flex align-items-center containerBlue pb-4 pb-lg-0">
                 <div className="d-flex align-items-center">
                   <img
                     src={Seta}

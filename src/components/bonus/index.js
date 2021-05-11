@@ -21,7 +21,7 @@ import img03 from "../../assets/img/img03.png";
 
 const Bonus = () => {
   return (
-    <Container>
+    <Container id="beneficios">
       <img src={Union} alt="União" className="peixe d-none d-lg-block" />
       <ContainerBonus>
         <div className="container">
@@ -138,7 +138,7 @@ const Bonus = () => {
           </div>
         </div>
       </ContainerBonus>
-      <ContainerInfo>
+      <ContainerInfo id="informacoes">
         <div className="container">
           <div className="row">
             <div className="col-12">
