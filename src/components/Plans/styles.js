@@ -53,6 +53,7 @@ export const CardPlan = Styled.div`
     background: #E22D4A;
 
     height: 370px;
+
     padding-bottom: 48px;
 
     h3{
@@ -130,6 +131,10 @@ export const CardPlan = Styled.div`
           margin-right: 0 !important;
         }
       }
+    }
+
+    @media screen and (max-width: 500px) {
+      height: 600px !important;
     }
   }
 `;

@@ -50,6 +50,12 @@ export const NavStyle = Styled.div`
         position: relative;
         z-index: 30;
       }
+
+      @media screen and (max-width: 500px) {
+        width: 150px;
+        height: 150px;
+        padding: 105px 32px 50px 32px;
+      }
     }
 
 

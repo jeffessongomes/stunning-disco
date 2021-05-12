@@ -6,8 +6,8 @@ const Associated = () => {
   return(
     <ContainerAssociated>
       <div className="container">
-        <div className="row">
-          <div className="offset-lg-2 col-lg-9 col-12">
+        <div className="row d-flex justify-content-center">
+          <div className="col-lg-9 col-12">
             <div className="content">
               <img src={Detail} alt="Imagem de um detalhe" loading="lazy" />
               <div className="text">

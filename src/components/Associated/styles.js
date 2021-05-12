@@ -16,6 +16,10 @@ export const ContainerAssociated = Styled.div`
         webkit-transform: scaleX(-1);
         transform: scaleX(-1);
       }
+
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
     }
 
     
@@ -31,6 +35,7 @@ export const ContainerAssociated = Styled.div`
         font-family: Raleway;
         margin-bottom: 11px;
         font-size: 35px;
+        text-align: center;
 
         padding-top: 56px;
 
@@ -44,6 +49,7 @@ export const ContainerAssociated = Styled.div`
         font-family: Raleway;
         color: #FFFFFF;
         margin: 0;
+        text-align: center;
         
         @media screen and (max-width: 960px) {
           text-align: center;        

@@ -337,7 +337,7 @@ const Form = () => {
           <div className="col-6">
             <img src={Cards} alt="Cartões de credito" style={{marginTop: '40px'}} loading="lazy" />
           </div>
-          <div className="col-6 d-flex justify-content-end button">
+          <div className="col-lg-6 col-12 d-flex justify-content-center justify-content-lg-end button">
             <Button 
               type="submit"
             >

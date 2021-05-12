@@ -9,7 +9,7 @@ export const App = Styled.div`
     bottom: 50px;
     right: 95px;
     @media screen and (max-width: 960px) {
-      bottom: 70px;
+      bottom: 90px;
       right: 20px;
     }
   }
