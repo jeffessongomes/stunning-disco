@@ -65,6 +65,10 @@ export const CardPlan = Styled.div`
       color: #FFFFFF;
       letter-spacing: 1.35px;
       margin-bottom: 30px;
+
+      @media screen and (max-width: 960px) {
+        padding-left: 50px;
+      }
     }
 
     p{
@@ -111,7 +115,6 @@ export const CardPlan = Styled.div`
 
     @media screen and (max-width: 960px) {
       display: flex;
-      align-items: center;
       flex-direction: column;
       height: 450px;
 
