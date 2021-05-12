@@ -18,11 +18,15 @@ export const ContainerAssociated = Styled.div`
       }
 
       @media screen and (max-width: 500px) {
-        display: none;
+        display: none;      
       }
     }
-
     
+    @media screen and (max-width: 960px) {
+      justify-content: center !important;
+    }
+
+
 
     div.text{
       display: flex;

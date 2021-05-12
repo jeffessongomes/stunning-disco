@@ -3,6 +3,13 @@ import Styled from 'styled-components'
 import Bars from '../../assets/img/bars-solid.svg';
 
 export const NavStyle = Styled.div`
+    @media screen and (max-width: 960px) {
+      position: absolute;
+      width: 100%;
+      z-index: 100;
+
+    }
+
   &::before{
     border-top: 22px solid #0059A4;
 

@@ -6,11 +6,16 @@ export const App = Styled.div`
   .zap{
     position: fixed;
     z-index: 8001;
-    bottom: 50px;
-    right: 95px;
+    bottom: 0px;
+    right: 0px;
+
+    img{
+      height: 130px;
+    }
+
     @media screen and (max-width: 960px) {
-      bottom: 90px;
-      right: 20px;
+      bottom: 0px;
+      right: 0px;
     }
   }
 `;
@@ -29,6 +34,13 @@ export const BannerContainer = Styled.div`
   background-size: cover;
   
 
+  @media screen and (max-width: 960px) {
+    background-size: 100% 100%;
+    height: 300px;
+    margin-top: 20px;
+    box-shadow: 0 300px 200px rgba(0, 0, 0, .55)  inset;
+  }
+
   display: flex;
   align-items: flex-end;
 
@@ -45,7 +57,7 @@ export const BannerContainer = Styled.div`
   }
 
   @media screen and (max-width: 960px) {
-    margin-top: -235px;
+    margin: 0;
   }
   `
 ;
