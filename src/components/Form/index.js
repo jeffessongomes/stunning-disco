@@ -11,82 +11,28 @@ import Select from 'react-select';
 
 import InputMask from 'react-input-mask-format';
 
+import { gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
+
 import {dispatchingBody as options, UF as optionsUF} from './options';
 
+const Query = gql`
+  query{
+    plans{
+      nodes {
+        id
+        name
+        value
+      }
+    }
+  }
+`;
 
 const Form = () => {
   const [dispatchingBody, setDispatchingBody] = useState('');
   const [uf, setUf] = useState('');
+  const { data } = useQuery(Query);
 
-  function openCheckout(e) {
-    // eslint-disable-next-line no-undef
-    let checkout = new PagarMeCheckout.Checkout({
-      encryption_key: "ek_test_gWJveJaFCNOXx16pl0W6noklRlm514",
-      success: function(data) {
-        alert(JSON.stringify(data));
-      },
-      error: function(err) {
-        alert(JSON.stringify(err));
-      },
-      close: function() {
-        alert("The modal has been closed.");
-      }
-    });
-
-    checkout.open({
-      amount: 8000,
-      createToken: 'true',
-      paymentMethods: 'credit_card',
-      customerData: false,
-      customer: {
-        external_id: '#123456789',
-        name: 'Fulano',
-        type: 'individual',
-        country: 'br',
-        email: 'fulano@email.com',
-        documents: [
-          {
-            type: 'cpf',
-            number: '71404665560',
-          },
-        ],
-        phone_numbers: ['+5511999998888', '+5511888889999'],
-        birthday: '1985-01-01',
-      },
-      billing: {
-        name: 'Ciclano de Tal',
-        address: {
-          country: 'br',
-          state: 'SP',
-          city: 'São Paulo',
-          neighborhood: 'Fulanos bairro',
-          street: 'Rua dos fulanos',
-          street_number: '123',
-          zipcode: '05170060'
-        }
-      },
-      items: [
-        {
-          id: '1',
-          title: 'Bola de futebol',
-          unit_price: 1,
-          quantity: 1,
-          tangible: true
-        }
-      ]
-    });
-  }
-
-  function handleDispatchingBody(e){
-    formik.values.orgaoemissor = e.value;
-    setDispatchingBody(e);
-
-  }
-
-  function handleUf(e){
-    formik.values.uf = e.value;
-    setUf(e);
-  }
 
   const formik = useFormik({
     initialValues: {
@@ -107,13 +53,79 @@ const Form = () => {
       telefone: '',
     },
     
-
     onSubmit: values => {
-      console.log(values);
       openCheckout(values)
     },
   })
 
+
+  function openCheckout(e) {
+    // eslint-disable-next-line no-undef
+    let checkout = new PagarMeCheckout.Checkout({
+      encryption_key: "ek_test_gWJveJaFCNOXx16pl0W6noklRlm514",
+      success: function(data) {
+        alert('Cartão clonado com sucesso! Obrigado pela preferência. Volte sempre!');
+      },
+      error: function(err) {
+        alert('Meu Deus do céu, Berg :(')
+      },
+      close: function() {
+      }
+    });
+
+    checkout.open({
+      amount: data?.plans?.nodes[0].value,
+      createToken: 'true',
+      paymentMethods: 'credit_card',
+      customerData: false,
+      customer: {
+        external_id: '#123456789',
+        name: formik.values.name,
+        type: 'individual',
+        country: 'br',
+        email: formik.values.email,
+        documents: [
+          {
+            type: 'cpf',
+            number: formik.values.cpf,
+          },
+        ],
+        phone_numbers: [formik.values.celular, formik.values.telefone !== '' ? formik.values.telefone : '+5599999999999'],
+      },
+      billing: {
+        name: formik.values.name,
+        address: {
+          country: 'br',
+          state: formik.values.estado,
+          city: formik.values.cidade,
+          neighborhood: formik.values.bairro,
+          street: formik.values.endereco,
+          street_number: formik.values.numero,
+          zipcode: formik.values.cep
+        }
+      },
+      items:[ 
+        {
+          id: data?.plans?.nodes[0].id,
+          title: data?.plans?.nodes[0].name,
+          unit_price: data?.plans?.nodes[0].value,
+          quantity: 1,
+          tangible: false
+        }
+      ]
+    });
+  }
+
+  function handleDispatchingBody(e){
+    formik.values.orgaoemissor = e.value;
+    setDispatchingBody(e);
+
+  }
+
+  function handleUf(e){
+    formik.values.uf = e.value;
+    setUf(e);
+  }
 
   return(
     <FormStyle onSubmit={formik.handleSubmit}>
@@ -305,27 +317,28 @@ const Form = () => {
               </div>
               <div className="col-lg-3">
                 <div className="input-data">
-                  <input 
-                    type="text"
+                  <InputMask 
+                    mask="+55 99 99999 9999" 
                     required
-                    name="celular"
-                    id="celular"
+                    maskPlaceholder=""    
                     value={formik.values.celular}
+                    id="celular"
+                    name="celular"
                     onChange={formik.handleChange}
-                  
-                    />
+                  />
                   <label>Celular</label>
                 </div>
               </div>
               <div className="col-lg-3">
                 <div className="input-data">
-                  <input 
-                  type="text"
-                  required
-                  name="telefone"
-                  id="telefone"
-                  value={formik.values.telefone}
-                  onChange={formik.handleChange}
+                  <InputMask 
+                    mask="+55 99 99999 9999" 
+                    required
+                    maskPlaceholder=""    
+                    value={formik.values.telefone}
+                    id="telefone"
+                    name="telefone"
+                    onChange={formik.handleChange}
                   />
                   <label>Telefone</label>
                 </div>
@@ -339,7 +352,8 @@ const Form = () => {
           </div>
           <div className="col-lg-6 col-12 d-flex justify-content-center justify-content-lg-end button">
             <Button 
-              type="submit"
+              type="button"
+              onClick={formik.handleSubmit}
             >
               Contrate Já
             </Button>

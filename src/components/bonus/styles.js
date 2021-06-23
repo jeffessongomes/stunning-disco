@@ -1,8 +1,6 @@
 import Styled from 'styled-components';
 import { Tabs } from 'react-bootstrap';
 
-import Union from "../../assets/img/union.png";
-
 export const Container = Styled.div`
   position: relative;
 
